@@ -1,0 +1,444 @@
+/******************* Base settings *******************/
+html, body {
+  height: 100%;
+}
+body {
+  font-size: 14px;
+  padding: 0 0 0 0;
+}
+input:focus,
+button:focus,
+textarea:focus {
+  outline: none;
+}
+
+/******************* Header *******************/
+header {
+  background-image: url(../img/main-background.jpg);
+  background-size: cover;
+}
+
+/* Main-list */
+.main_menu {
+  margin: 0;
+}
+.personal_сabinet, .currency, .language {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #0d3351 !important;
+  text-decoration: none;
+  color: black;
+} 
+.main_menu .phone {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #0d3351 !important;
+  text-decoration: none;
+  padding: 10px 0 0 0;
+}
+.main_menu .text {
+  font-size: 10px;
+  color: #0d3351;
+}
+
+/* Main menu */
+.navbar-default .navbar-offcanvas, .navbar-default {
+  background-color: transparent;
+  border: none;
+}
+.navbar-collapse.collapse {
+  display: flex;
+  justify-content: flex-end;
+}
+.navbar-collapse.collapse ul li {
+  margin: 20px 20px 0 0;
+}
+.hamburger_menu .dropdown-menu {
+  background-color: #0d3351 !important;
+  padding: 30px 30px 30px 30px;
+}
+.hamburger_menu .dropdown-menu a {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: white !important;
+}
+.hamburger_menu .dropdown-menu a:hover {
+  color: black !important;
+}
+.hamburger_menu .navbar-toggle {
+  float: left;
+  margin-left: 15px;
+  margin-top: 20px;
+}
+
+
+/* Main-slide */
+.main_slide {
+  position: relative;
+  margin: 45px 0 0px 0;
+  text-align: center;
+}
+.main_slide h1 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+  font-size: 36px;
+}
+.main_slide p {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+  font-size: 100px;
+  text-transform: uppercase;
+}
+.main_slide button {
+  text-decoration: none;
+  border: 1px solid #33c7fd;
+  color: white;
+  background-color: #33c7fd;
+  padding: 20px 50px 20px 50px;
+  margin-top: 60px;
+  margin-bottom: 195px;
+}
+.main_slide button:hover {
+  background-color: #2a9ec8;
+}
+
+/* Figure */
+.figure img {
+  position: absolute;
+  top: 50%;
+  left: 47%;
+  transform: translateX(-50%);
+  transform: translateY(50%);
+}
+
+/******************* Cruise catalog *******************/
+#cruise_catalog {
+  background-color: #f3f3f3;
+}
+/* Catalog header */ 
+.catalog_header {
+  margin-top: 95px;
+  margin-bottom: 45px;
+}
+.catalog_header h2 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+  font-size: 36px;
+  color: #0d3351;
+}
+.catalog_header li {
+  list-style-type: none;
+}
+.catalog_header a {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  text-decoration: none;
+  color: #0d3351;
+}
+
+/* Catalog items */ 
+.catalog_items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.duo_element {
+  flex-direction: column;
+}
+.catalog_item {
+  background-color: white;
+  margin-bottom: 15px;
+  margin-left: 15px;
+}
+.catalog_item a {
+  cursor: pointer;
+}
+.catalog_text {
+  /*display: inline;*/
+  padding: 15px 35px 20px 35px;
+}
+.catalog_text h3 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #33c7fd;
+}
+.catalog_text span {
+  font-size: 10px;
+}
+.catalog_text p {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #0d3351;
+}
+.catalog_text .new_price {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+  font-size: 30px;
+  color: #0d3351;
+  padding-right: 30px;
+}
+.catalog_text .old_price {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #c7cbd0;
+  text-decoration: line-through;
+}
+#cruise_catalog button {
+  display: none;
+  text-decoration: none;
+  border: 1px solid #33c7fd;
+  color: white;
+  background-color: #33c7fd;
+  padding: 15px 40px 15px 40px;
+  margin-top: 25px;
+  margin-bottom: 62px;
+}
+#cruise_catalog .active {
+  display: inline-block;
+}
+#cruise_catalog button:hover {
+  background-color: #2a9ec8;
+}
+#cruise_catalog button span {
+  font-size: 6px;
+}
+.srcshot_1, .srcshot_2, .srcshot_3 {
+  position: relative;
+  text-align: center;
+}
+.srcshot_1::before, .srcshot_2::before, .srcshot_3::before {
+  position: absolute;
+  top: -1%;
+  left: 85%;
+  height: 101px;
+  width: 89px;
+  transform: translateX(-50%);
+  padding: 25px 6px 4px;
+  color: #fff;
+  font-size: 12px;
+}
+.srcshot_1::before {
+  content: 'ХИТ ПРОДАЖ';
+  background-image: url(../img/flag-blue.png);
+}
+.srcshot_2::before {
+  content: 'АКЦИЯ';
+  background-image: url(../img/flag-red.png);
+  padding-top: 35px;
+  top: -3%;
+}
+.srcshot_3::before {
+  content: 'СКИДКА 10%';
+  background-image: url(../img/flag-red.png);
+  top: -3%;
+}
+
+/******************* Footer *******************/
+/* Footer menu */ 
+footer {
+  background: white;
+  padding-bottom: 40px;
+}
+.footer_menu, .footer_contacts, .footer_copyright {
+  margin-top: 30px;
+}
+.footer_menu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer_menu li {
+  list-style-type: none;
+}
+.footer_menu a {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  text-decoration: none;
+  color: #1d415d;
+  display: block;
+  white-space: nowrap;
+}
+.footer_menu a:hover {
+  color: #397cb0;
+}
+
+/* Footer contacts */
+.footer_contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer_contacts_links {
+  display: flex;
+  flex-direction: row;
+}
+.footer_contacts p {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #1d415d;
+}
+.footer_contacts .circle {
+  position: relative;
+  width: 25px; height: 25px;
+  background: #0d3351;
+  border-radius: 50%;
+}
+.footer_contacts a {
+  margin-right: 5px;
+}
+.footer_contacts a:last-child {
+  margin-right: 0;
+}
+.footer_contacts a span {
+  position: absolute;
+  left: 5.5px;
+  top: 5px;
+  color: white;
+}
+
+/* Footer copyright */
+.footer_copyright {
+  display: flex;
+  flex-direction: column;
+}
+.footer_copyright a:hover {
+  color: #397cb0;
+}
+.footer_copyright a {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  color: #1d415d;
+}
+.footer_copyright p {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  color: #1d415d;
+}
+.footer_copyright p:last-child {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #1d415d;
+}
+
+/******************* Media *******************/
+@media (max-width: 1200px) {
+  .main_slide h1 {
+    font-size: 26px;
+  }
+  .main_slide p {
+    font-size: 72px;
+  }
+  .figure img {
+    top: 45%;
+    left: 46%;
+  }
+  .catalog_item {
+    max-width: 345px;
+  }
+  .add_marg p:last-child {
+    padding-top: 19px;
+  }
+}
+@media (max-width: 992px) {
+  .figure img {
+    top: 52%;
+    left: 46%;
+  }
+}
+@media (max-width: 768px) {
+  .main_slide h1 {
+    font-size: 20px;
+  }
+  .main_slide p {
+    font-size: 50px;
+  }
+  .figure img {
+    top: 40%;
+    left: 45%;
+  }
+  .footer_contacts, .footer_copyright {
+    align-items: center;
+  }
+}
+@media (max-width: 580px) {
+  .figure img {
+    top: 40%;
+    left: 42%;
+  }
+}
+@media (max-width: 550px) {
+  .figure img {
+    top: 48%;
+  }
+}
+@media (max-width: 360px) {
+  .figure img {
+    top: 52%;
+  }
+}
+@media (max-width: 320px) {
+  .figure img {
+    top: 52%;
+  }
+}
+
+/******************* Modal *******************/
+.close {
+  position: absolute;
+  font-size: 30px;
+  top: 0;
+  right: 2%;
+}
+.modal-content {
+  max-width: 720px;
+}
+.modal-body .col-lg-6 {
+  padding-right: 0;
+}
+.modal_img {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 282px;
+  padding-top: 15px;
+}
+.group_img {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.modal_text {
+  padding: 15px 30px 20px 15px; 
+}
+.modal_text h3 {
+  margin-top: 0;
+}
+.modal-btn button {
+  text-decoration: none;
+  border: 1px solid #33c7fd;
+  color: white;
+  background-color: #33c7fd;
+  padding: 15px 40px 15px 40px;
+  margin-top: 0;
+  margin-bottom: 70px;
+}
+.modal-btn button:hover {
+  background-color: #2a9ec8;
+}
+.modal-btn button span {
+  font-size: 6px;
+}
