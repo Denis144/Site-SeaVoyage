@@ -6,12 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Верстка из макета</title>
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Fancybox -->
     <link rel="stylesheet" href="css/jquery.fancybox.min.css" type="text/css" media="screen" />
     <link href='https://f.usemind.org/f/1/mn2/s.css' rel='stylesheet' />
-    <link rel="stylesheet" href="http://bootstraptema.ru/plugins/2016/jasny-bootstrap/jasny-bootstrap.min.css">
     <link rel="stylesheet" type="text/css" media="all" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700|Roboto+Slab" rel="stylesheet">
@@ -27,92 +24,51 @@
   </head>
   <body>
     <header id="main">
-    <nav class="navbar navbar-default">
-      <div class="container">
-        <!-- Выпадающее меню -->
+      <div class="main_menu">
         <div class="hamburger_menu">
-          <ul class="nav navbar-nav">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle currency navbar-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Популярные маршруты</a></li>
-                <li><a href="#">Расписание рейсов</a></li>
-                <li><a href="#">Забронированные рейсы</a></li>
-                <li><a href="#">Вход для партнеров</a></li>
-                <li><a href="#">О компании</a></li>
-                <li><a href="#">Контакты</a></li>
-              </ul>
-            </li>
-          </ul>
+          <a href="#"><span class="icon-bars"></span></a>
         </div>
-        <!-- Горизонтальное меню -->
-        <div class="main_menu collapse navbar-collapse hidden-xs">
-          <ul class="nav navbar-nav">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle personal_сabinet" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="icon-user"></span> Личный кабинет <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Вход</a></li>
-                <li><a href="#">Регистрация</a></li>
-                <li><a href="#">Выход</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle currency" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="icon-uniE902"></span> Рубль <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Доллар (США)</a></li>
-                <li><a href="#">Евро</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle language" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ru <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Eng</a></li>
-              </ul>
-            </li>
-            <li><a class="phone" href="tel:+7(495)128-13-56">8 800 500-61-05 </a><p class="text">Круглосуточная поддержка</p></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="main_slide">
-            <img src="img/logo.png" alt="logo">
-            <h1>Морские прогулки</h1>
-            <p>по чёрному морю</p>
-            <button class="go_to" href="#cruise_catalog">Выбрать круиз</button>
-            <div class="figure">
-              <img src="img/figure.png" alt="">
-            </div>
+        <div class="horizontal_menu">
+          <div class="personal_сabinet">
+            <a href=""><span class="icon-user"></span> Личный кабинет <span class="icon--1--2"></span></a>
+          </div>
+          <div class="currency">
+            <a href=""><span class="icon-uniE902"></span> Рубль <span class="icon--1--2"></span></a>
+          </div>
+          <div class="language">
+            <a href="">Ru <span class="icon--1--2"></span></a>
+          </div>
+          <div class="header_contacts">
+            <a class="phone" href="tel:+7(495)128-13-56">8 800 500-61-05 </a><p class="text">Круглосуточная поддержка</p>
           </div>
         </div>
       </div>
-    </div> <!-- container -->
+      <div class="main_slide">
+        <img src="img/logo.png" alt="logo">
+        <h1>Морские прогулки</h1>
+        <p>по чёрному морю</p>
+        <div class="figure_btn">
+          <button class="go_to" href="#cruise_catalog">Выбрать круиз</button>
+          <div class="figure">
+            <img src="img/figure.png" alt="">
+          </div>
+        </div>
+      </div>
   </header>
 
   <section id="cruise_catalog">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <div class="catalog_header">
-            <h2>Каталог круизов</h2>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Сортировать круизы по цене  <b class="caret"></b></a>
-            </li>
-          </div>
-        </div>
-      </div><!-- row_catalog_header -->
+      <div class="catalog_header">
+        <h2>Каталог круизов</h2>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Сортировать круизы по цене  <span class="icon--1--2"></span></a>
+        </li>
+      </div>
       <div class="catalog_items">
-        <div class="catalog_item"> 
-          <div class="srcshot_1 hidden-md hidden-sm hidden-xs">
+        <div class="catalog_item_1 catalog_color"> 
+          <div class="srcshot_1">
             <a data-toggle="modal" data-target="#popup_catalog">
-              <img src="img/Catalog/catalog-item-1.jpg" alt="" />
-            </a>
-          </div>
-          <div class="srcshot_1 hidden-lg">
-            <a data-toggle="modal" data-target="#popup_catalog">
-              <img src="img/AdaptiveCatalog/catalog-item-1(tablet).jpg" alt="" />
+              <img id="catalog_img_1" src="img/Catalog/catalog-item-1.jpg" alt="" />
             </a>
           </div>
           <div class="catalog_text add_marg">
@@ -121,11 +77,10 @@
             <p><span class="new_price">49000 руб.</span></p>
           </div>
         </div> <!-- 1-element -->
-        
-        <div class="catalog_item hidden-lg">
+        <div class="catalog_item_2 catalog_color">
           <div class="srcshot_2">
             <a data-toggle="modal" data-target="#popup_catalog">
-              <img id="img_2" src="img/AdaptiveCatalog/catalog-item-2(tablet).jpg" alt="" />
+              <img id="catalog_img_2" src="img/Catalog/catalog-item-2.jpg" alt="" />
             </a>
           </div>
           <div class="catalog_text">
@@ -134,11 +89,10 @@
             <p><span class="new_price">5000 руб.</span><span class="old_price">15000 руб.</span></p>
           </div>
         </div><!-- 2-element -->
-
-        <div class="catalog_item hidden-lg">
+        <div class="catalog_item_3 catalog_color">
           <div class="srcshot_3">
             <a data-toggle="modal" data-target="#popup_catalog">
-              <img id="img_3" src="img/AdaptiveCatalog/catalog-item-3(tablet).jpg" alt="" />
+              <img id="catalog_img_3" src="img/Catalog/catalog-item-3.jpg" alt="" />
             </a>
           </div>
           <div class="catalog_text add_marg">
@@ -147,44 +101,10 @@
             <p><span class="new_price">7 000 руб.</span><span class="old_price">10000 руб.</span></p>
           </div>
         </div><!-- 3-element -->
-
-        <div class="duo_element hidden-md hidden-sm hidden-xs">
-          <div class="catalog_item">
-            <div class="srcshot_2 hidden-md hidden-sm hidden-xs">
-              <a data-toggle="modal" data-target="#popup_catalog">
-                <img src="img/Catalog/catalog-item-2.jpg" alt="" />
-              </a>
-            </div>
-            <div class="catalog_text">
-              <h3>Обзорная морская прогулка с экскурсией  <span class="icon-play3"></span></h3>
-              <p><b>Маршрут:</b> Сочи-Адлер-Сочи (без высадки)</p><p><b>Продолжительность:</b> 1 ч. 0 мин.</p>
-              <p><span class="new_price">5000 руб.</span><span class="old_price">15000 руб.</span></p>
-            </div>
-          </div><!-- 2-element -->
-
-          <div class="catalog_item">
-            <div class="srcshot_3 hidden-md hidden-sm hidden-xs">
-              <a data-toggle="modal" data-target="#popup_catalog">
-                <img src="img/Catalog/catalog-item-3.jpg" alt="" />
-              </a>
-            </div>
-            <div class="catalog_text">
-              <h3>Морская прогулка в Геленджик  <span class="icon-play3"></span></h3>
-              <p><b>Маршрут:</b> Сочи-Туапсе-Геленджик</p><p><b>Продолжительность:</b> 12 ч. 30 мин.</p>
-              <p><span class="new_price">7 000 руб.</span><span class="old_price">10000 руб.</span></p>
-            </div>
-          </div><!-- 3-element -->
-        </div><!-- 2 and 3-element -->
-
-        <div class="catalog_item">
-          <div class="hidden-md hidden-sm hidden-xs">
+        <div class="catalog_item_4 catalog_color">
+          <div>
             <a data-toggle="modal" data-target="#popup_catalog">
-              <img id="img_4" src="img/Catalog/catalog-item-4.jpg" alt=""/>
-            </a>
-          </div>
-          <div class="hidden-lg">
-            <a data-toggle="modal" data-target="#popup_catalog">
-              <img src="img/AdaptiveCatalog/catalog-item-4(tablet).jpg" alt=""/>
+              <img id="catalog_img_4" src="img/Catalog/catalog-item-4.jpg" alt=""/>
             </a>
           </div>
           <div class="catalog_text">
@@ -193,16 +113,10 @@
             <p><span class="new_price">14 800 руб.</span></p>
           </div>
         </div><!-- 4-element -->
-
-        <div class="hidden_element catalog_item hidden-md hidden-sm hidden-xs">
-          <div class="hidden-md hidden-sm hidden-xs">
+        <div class="hidden_element catalog_item_5 catalog_color">
+          <div>
             <a data-toggle="modal" data-target="#popup_catalog">
-              <img id="img_5" src="img/Catalog/catalog-item-5.jpg" alt="" />
-            </a>
-          </div>
-          <div class="hidden-lg">
-            <a data-toggle="modal" data-target="#popup_catalog">
-              <img src="img/AdaptiveCatalog/catalog-item-1(tablet).jpg" alt=""/>
+              <img id="catalog_img_5" src="img/Catalog/catalog-item-5.jpg" alt="" />
             </a>
           </div>
           <div class="catalog_text">
@@ -212,40 +126,34 @@
           </div>
         </div><!-- 5-element -->
       </div>
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <button class="more active" href="#">Больше круизов  <span class="icon--1--2"></span></button>
-          <button class="more" href="#">Скрыть  <span class="icon--1--2"></span></button>
-        </div>
+      <div class="catalog_btn">
+        <button class="more active" href="#">Больше круизов  <span class="icon--1--2"></span></button>
+        <button class="more" href="#">Скрыть  <span class="icon--1--2"></span></button>
       </div>
     </div>
   </section>
   
   <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3 col-md-3 col-sm-4 hidden-xs">
-          <div class="footer_menu">
-            <ul>
-              <li><a href="#">Вход для партнеров</a></li>
-              <li><a href="#">О компании</a></li>
-              <li><a href="#">Контакты</a></li></li>
-            </ul>
+    <div class="footer_items">
+      <div class="footer_menu">
+        <ul>
+          <li><a href="#">Вход для партнеров</a></li>
+          <li><a href="#">О компании</a></li>
+          <li><a href="#">Контакты</a></li></li>
+        </ul>
+      </div>
+      <div class="footer_block">
+        <div class="footer_contacts">
+          <p>Будь на связи:</p>
+          <div class="footer_contacts_links">
+            <a href="#" class="circle"><span class="icon-vk"></span></a>
+            <a href="#" class="circle"><span class="icon-odnoklassniki"></span></a>
+            <a href="#" class="circle"><span class="icon-youtube"></span></a>
+            <a href="#" class="circle"><span class="icon-instagram"></span></a>
           </div>
         </div>
-        <div class="col-lg-6 col-md-5 col-sm-4">
-          <div class="footer_contacts">
-            <p>Будь на связи:</p>
-            <div class="footer_contacts_links">
-              <a href="#" class="circle"><span class="icon-vk"></span></a>
-              <a href="#" class="circle"><span class="icon-odnoklassniki"></span></a>
-              <a href="#" class="circle"><span class="icon-youtube"></span></a>
-              <a href="#" class="circle"><span class="icon-instagram"></span></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-4">
-          <div class="footer_copyright">
+        <div class="footer_copyright">
+          <div>
             <a href="tel:+7(495)128-13-56">8 800 500-61-05 </a>
             <p>Круглосуточная поддержка</p>
             <p>© 2016 OOO «Городские Круизы»</p>
@@ -255,65 +163,10 @@
     </div>
   </footer>
 
-  <!-- Modal -->
-  <div class="modal fade" id="popup_catalog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body row">
-          <div class="col-lg-6 text-center">
-            <div class="modal_img">
-              <a data-fancybox="gallery-tabl" href="img/Modal-img/modal-img-1.jpg">
-                <img src="img/Modal-img/modal-img-1.jpg" alt="" />
-              </a>
-              <div class="group_img">
-                <a data-fancybox="gallery-tabl" href="img/Modal-img/modal-img-2.jpg">
-                  <img src="img/Modal-img/modal-img-2.jpg" alt="" />
-                </a>
-                <a data-fancybox="gallery-tabl" href="img/Modal-img/modal-img-3.jpg">
-                  <img src="img/Modal-img/modal-img-3.jpg" alt="" />
-                </a>
-                <a data-fancybox="gallery-tabl" href="img/Modal-img/modal-img-4.jpg">
-                  <img src="img/Modal-img/modal-img-4.jpg" alt="" />
-                </a>
-                <a data-fancybox="gallery-tabl" href="img/Modal-img/modal-img-5.jpg">
-                  <img src="img/Modal-img/modal-img-5.jpg" alt="" />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="modal_text catalog_text">
-              <h3>Морская прогулка
-в Абрау-Дюрсо</h3>
-              <p><b>Маршрут:</b> Сочи - Абрау-Дюрсо</p>
-              <p><b>Продолжительность:</b> 11 ч. 0 мин.</p>
-              <p><b>Расписание:</b><br>Отправление из Сочи: ежедневно в 10:00, 11:40, 13:20, 15:00, 16:40
-              Отправление из Абрау-Дюрсо: ежедневно 
-              в 12:25, 14:05, 15:45, 17:25, 19:05  
-              Продолжительность: 11 часов 0 мин., из которых 10 часов - морская прогулка (туда и обратно), от 1 часа 30 мин. - свободное время в Ласточкином гнезде
-              Причал отправления/прибытия: набережная Ленина, причал №8, теплоход "Азов"</p>
-              <p><span class="new_price">14800 руб.</span></p>
-              <div class="modal-btn">
-                <button href="#">Бронирование</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="http://bootstraptema.ru/plugins/2016/jasny-bootstrap/jasny-bootstrap.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
-  <script src="js/jquery.maskedinput.min.js"></script>
 
   <!-- Scroll --> 
     <script>
@@ -333,13 +186,39 @@
       }
     </script>
 
-  <!-- More -->
+    <!-- More -->
     <script>
      $(function(){
         $('.more').click(function(){
             $('.hidden_element').toggleClass('hidden-md hidden-sm hidden-xs');
             $('.more').toggleClass('active');
         });
+      });
+    </script>
+
+    <!-- Change images -->
+    <script>
+      var my = {
+          window : $(window)
+          };
+
+      $(window).resize(function () {
+        var width = my.window.width();
+ 
+        if(my.window.width() < 1184)
+        {
+          document.getElementById("catalog_img_1").src="img/AdaptiveCatalog/catalog-item-1(tablet).jpg";
+          document.getElementById("catalog_img_2").src="img/AdaptiveCatalog/catalog-item-2(tablet).jpg";
+          document.getElementById("catalog_img_3").src="img/AdaptiveCatalog/catalog-item-3(tablet).jpg";
+          document.getElementById("catalog_img_4").src="img/AdaptiveCatalog/catalog-item-4(tablet).jpg";
+        }
+        else
+        {
+          document.getElementById("catalog_img_1").src="img/Catalog/catalog-item-1.jpg";
+          document.getElementById("catalog_img_2").src="img/Catalog/catalog-item-2.jpg";
+          document.getElementById("catalog_img_3").src="img/Catalog/catalog-item-3.jpg";
+          document.getElementById("catalog_img_4").src="img/Catalog/catalog-item-1.jpg";
+        }
       });
     </script>
   </body>
