@@ -6,10 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Верстка из макета</title>
-    <!-- Fancybox -->
-    <link rel="stylesheet" href="css/jquery.fancybox.min.css" type="text/css" media="screen" />
     <link href='https://f.usemind.org/f/1/mn2/s.css' rel='stylesheet' />
-    <link rel="stylesheet" type="text/css" media="all" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700|Roboto+Slab" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
@@ -22,21 +19,42 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body id="body">
     <header id="main">
       <div class="main_menu">
-        <div class="hamburger_menu">
-          <a href="#"><span class="icon-bars"></span></a>
+        <div class="droplink hamburger_menu">
+          <a class="menu_button" onclick="func1()"><span class="icon-bars"></span></a>
+          <ul id="hamburger_dropdown" style="display:none">
+             <li><a href="#">Популярные маршруты</a></li>
+             <li><a href="#">Расписание рейсов</a></li>
+             <li><a href="#">Забронированные рейсы</a></li>
+             <li><a href="#">Вход для партнеров</a></li>
+             <li><a href="#">О компании</a></li>
+             <li><a href="#">Контакты</a></li>
+          </ul>
         </div>
         <div class="horizontal_menu">
-          <div class="personal_сabinet">
-            <a href=""><span class="icon-user"></span> Личный кабинет <span class="icon--1--2"></span></a>
+          <div class="droplink personal_сabinet">
+            <a class="menu_button" onclick="func2()"><span class="icon-user"></span> Личный кабинет <span class="icon--1--2"></span></a>
+            <ul id="personal_dropdown" style="display:none">
+               <li><a href="#">Вход</a></li>
+               <li><a href="#">Регистрация</a></li>
+               <li><a href="#">Выход</a></li>
+            </ul>
           </div>
-          <div class="currency">
-            <a href=""><span class="icon-uniE902"></span> Рубль <span class="icon--1--2"></span></a>
+          <div class="droplink currency">
+            <a class="menu_button" onclick="func3()"><span class="icon-uniE902"></span> Рубль <span class="icon--1--2"></span></a>
+            <ul id="currency_dropdown" style="display:none">
+               <li><a href="#">Доллар (США)</a></li>
+               <li><a href="#">Евро</a></li>
+            </ul>
           </div>
-          <div class="language">
-            <a href="">Ru <span class="icon--1--2"></span></a>
+          <div class="droplink language">
+            <a class="menu_button" onclick="func4()">Ru <span class="icon--1--2"></span></a>
+            <ul id="language_dropdown" style="display:none">
+               <li><a href="#">Доллар (США)</a></li>
+               <li><a href="#">Евро</a></li>
+            </ul>
           </div>
           <div class="header_contacts">
             <a class="phone" href="tel:+7(495)128-13-56">8 800 500-61-05 </a><p class="text">Круглосуточная поддержка</p>
@@ -61,13 +79,13 @@
       <div class="catalog_header">
         <h2>Каталог круизов</h2>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Сортировать круизы по цене  <span class="icon--1--2"></span></a>
+          <a href="#">Сортировать круизы по цене  <span class="icon--1--2"></span></a>
         </li>
       </div>
       <div class="catalog_items">
         <div class="catalog_item_1 catalog_color"> 
           <div class="srcshot_1">
-            <a data-toggle="modal" data-target="#popup_catalog">
+            <a href="#popup_catalog">
               <img id="catalog_img_1" src="img/Catalog/catalog-item-1.jpg" alt="" />
             </a>
           </div>
@@ -79,7 +97,7 @@
         </div> <!-- 1-element -->
         <div class="catalog_item_2 catalog_color">
           <div class="srcshot_2">
-            <a data-toggle="modal" data-target="#popup_catalog">
+            <a href="#popup_catalog">
               <img id="catalog_img_2" src="img/Catalog/catalog-item-2.jpg" alt="" />
             </a>
           </div>
@@ -91,7 +109,7 @@
         </div><!-- 2-element -->
         <div class="catalog_item_3 catalog_color">
           <div class="srcshot_3">
-            <a data-toggle="modal" data-target="#popup_catalog">
+            <a href="#popup_catalog">
               <img id="catalog_img_3" src="img/Catalog/catalog-item-3.jpg" alt="" />
             </a>
           </div>
@@ -103,7 +121,7 @@
         </div><!-- 3-element -->
         <div class="catalog_item_4 catalog_color">
           <div>
-            <a data-toggle="modal" data-target="#popup_catalog">
+            <a href="#popup_catalog">
               <img id="catalog_img_4" src="img/Catalog/catalog-item-4.jpg" alt=""/>
             </a>
           </div>
@@ -113,9 +131,9 @@
             <p><span class="new_price">14 800 руб.</span></p>
           </div>
         </div><!-- 4-element -->
-        <div class="hidden_element catalog_item_5 catalog_color">
+        <div class="catalog_item_5 catalog_color">
           <div>
-            <a data-toggle="modal" data-target="#popup_catalog">
+            <a href="#popup_catalog">
               <img id="catalog_img_5" src="img/Catalog/catalog-item-5.jpg" alt="" />
             </a>
           </div>
@@ -127,8 +145,7 @@
         </div><!-- 5-element -->
       </div>
       <div class="catalog_btn">
-        <button class="more active" href="#">Больше круизов  <span class="icon--1--2"></span></button>
-        <button class="more" href="#">Скрыть  <span class="icon--1--2"></span></button>
+        <button class="more">Больше круизов  <span class="icon--1--2"></span></button>
       </div>
     </div>
   </section>
@@ -163,10 +180,125 @@
     </div>
   </footer>
 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
+  <!-- Modal -->
+  <div id="popup_catalog" class="popup_overlay">
+    <div class="popup">
+      <div class="modal_header">
+        <a class="popup_close" href="#close">&times;</a>
+      </div>
+      <div class="modal_body">
+        <div class="modal_img">
+          <a href="#popup_slider" onclick="transformImage()">
+            <img src="img/Modal-img/modal-img-1.jpg" alt="" />
+          </a>
+          <div class="group_img">
+            <a href="#popup_slider">
+              <img src="img/Modal-img/modal-img-2.jpg" alt="" />
+            </a>
+            <a href="#popup_slider">
+              <img src="img/Modal-img/modal-img-3.jpg" alt="" />
+            </a>
+            <a href="#popup_slider">
+              <img src="img/Modal-img/modal-img-4.jpg" alt="" />
+            </a>
+            <a href="#popup_slider">
+              <img src="img/Modal-img/modal-img-5.jpg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="modal_text catalog_text">
+          <h3>Морская прогулка
+в Абрау-Дюрсо</h3>
+          <p><b>Маршрут:</b> Сочи - Абрау-Дюрсо</p>
+          <p><b>Продолжительность:</b> 11 ч. 0 мин.</p>
+          <p><b>Расписание:</b><br>Отправление из Сочи: ежедневно в 10:00, 11:40, 13:20, 15:00, 16:40
+          Отправление из Абрау-Дюрсо: ежедневно 
+          в 12:25, 14:05, 15:45, 17:25, 19:05  
+          Продолжительность: 11 часов 0 мин., из которых 10 часов - морская прогулка (туда и обратно), от 1 часа 30 мин. - свободное время в Ласточкином гнезде
+          Причал отправления/прибытия: набережная Ленина, причал №8, теплоход "Азов"</p>
+          <p><span class="new_price">14800 руб.</span></p>
+          <div class="modal-btn">
+            <button href="#">Бронирование</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slider -->
+  <div id="popup_slider" class="popup_overlay">
+    <div class="popup">
+      <div class="modal_header">
+        <a class="popup_close" href="#close">&times;</a>
+      </div>
+      <div class="slider">
+        <div class="item">
+            <img src="img/Modal-img/modal-img-1.jpg" alt="Первый слайд">
+        </div>
+        <div class="item">
+            <img src="img/Modal-img/modal-img-2.jpg" alt="Второй слайд">
+        </div>
+        <div class="item">
+            <img src="img/Modal-img/modal-img-3.jpg" alt="Третий слайд">
+        </div>
+        <div class="item">
+            <img src="img/Modal-img/modal-img-4.jpg" alt="Четвертый слайд">
+        </div>
+        <div class="item">
+            <img src="img/Modal-img/modal-img-5.jpg" alt="Пятый слайд">
+        </div>
+        <a class="prev" onclick="minusSlide()">&#10094;</a>
+        <a class="next" onclick="plusSlide()">&#10095;</a>
+      </div>
+      <div class="slider-dots">
+          <span class="slider-dots_item" onclick="currentSlide(1)"></span> 
+          <span class="slider-dots_item" onclick="currentSlide(2)"></span> 
+          <span class="slider-dots_item" onclick="currentSlide(3)"></span> 
+          <span class="slider-dots_item" onclick="currentSlide(4)"></span> 
+          <span class="slider-dots_item" onclick="currentSlide(5)"></span> 
+      </div>
+    </div>
+  </div>
+
+  <!-- Menu -->
+  <script type="text/javascript">
+    function func1()
+    {
+      var a = document.getElementById('hamburger_dropdown');
+      if ( a.style.display == 'none' )
+        a.style.display = 'block'
+      else
+        if ( a.style.display == 'block' )
+        a.style.display = 'none';
+    };
+    function func2()
+    {
+      var a = document.getElementById('personal_dropdown');
+      if ( a.style.display == 'none' )
+        a.style.display = 'block'
+      else
+        if ( a.style.display == 'block' )
+        a.style.display = 'none';
+    };
+    function func3()
+    {
+      var a = document.getElementById('currency_dropdown');
+      if ( a.style.display == 'none' )
+        a.style.display = 'block'
+      else
+        if ( a.style.display == 'block' )
+        a.style.display = 'none';
+    };
+    function func4()
+    {
+      var a = document.getElementById('language_dropdown');
+      if ( a.style.display == 'none' )
+        a.style.display = 'block'
+      else
+        if ( a.style.display == 'block' )
+        a.style.display = 'none';
+    };
+  </script>
 
   <!-- Scroll --> 
     <script>
@@ -185,41 +317,61 @@
         })
       }
     </script>
-
-    <!-- More -->
-    <script>
-     $(function(){
-        $('.more').click(function(){
-            $('.hidden_element').toggleClass('hidden-md hidden-sm hidden-xs');
-            $('.more').toggleClass('active');
-        });
-      });
-    </script>
-
+    
     <!-- Change images -->
     <script>
-      var my = {
-          window : $(window)
-          };
-
-      $(window).resize(function () {
-        var width = my.window.width();
- 
-        if(my.window.width() < 1184)
-        {
+      window.onresize=function(){
+        if(document.body.clientWidth < 1184){
           document.getElementById("catalog_img_1").src="img/AdaptiveCatalog/catalog-item-1(tablet).jpg";
           document.getElementById("catalog_img_2").src="img/AdaptiveCatalog/catalog-item-2(tablet).jpg";
           document.getElementById("catalog_img_3").src="img/AdaptiveCatalog/catalog-item-3(tablet).jpg";
           document.getElementById("catalog_img_4").src="img/AdaptiveCatalog/catalog-item-4(tablet).jpg";
-        }
-        else
-        {
+        }else {
           document.getElementById("catalog_img_1").src="img/Catalog/catalog-item-1.jpg";
           document.getElementById("catalog_img_2").src="img/Catalog/catalog-item-2.jpg";
           document.getElementById("catalog_img_3").src="img/Catalog/catalog-item-3.jpg";
           document.getElementById("catalog_img_4").src="img/Catalog/catalog-item-1.jpg";
         }
-      });
+      }
+    </script>
+
+    <!-- Slider script -->
+    <script>
+     /* Индекс слайда по умолчанию */
+      var slideIndex = 1;
+      showSlides(slideIndex);
+      /* Функция увеличивает индекс на 1, показывает следующй слайд*/
+      function plusSlide() {
+        showSlides(slideIndex += 1);
+      }
+      /* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/
+      function minusSlide() {
+        showSlides(slideIndex -= 1);  
+      }
+      /* Устанавливает текущий слайд */
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      /* Основная функция слайдера */
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("item");
+        var dots = document.getElementsByClassName("slider-dots_item");
+        if (n > slides.length) {
+          slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
     </script>
   </body>
 </html>
